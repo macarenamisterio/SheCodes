@@ -1,0 +1,35 @@
+function city() {
+      let cityName = prompt("In what city are you now?");
+
+      if (cityWeather()) {
+        updateH1("Currently is ${temperature} in ${cityName} 🌻 ");
+      } else {
+        updateH1("Currently is ${temperature} in ${cityName} 🥶 ");
+      }
+    }
+    
+    
+    ALL CODE
+    
+    function updateH1(newH1) {
+      let h1 = document.querySelector("h1");
+      h1.innerHTML = newH1;
+    }
+
+    function cityWeather() {
+      let temperature = prompt("What's the current temperature?");
+      return temperature >= 0;
+    }
+
+    function city() {
+      let cityName = prompt("In what city are you now?");
+
+      if (cityWeather()) {
+        updateH1("Currently is " + cityName + "in " + cityName + " 🌻 ");
+      } else {
+        updateH1("Currently is " + cityName + "in " + cityName + " 🥶 ");
+      }
+    }
+
+    let cityButton = document.querySelector("button");
+    cityButton.addEventListener("click", city);
